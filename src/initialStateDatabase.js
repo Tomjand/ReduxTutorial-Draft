@@ -16,21 +16,26 @@ const initialStateDatabase = {
   heros: [
     {
       id_hero: 0,
-      movie: "StarWars",
-      name: "R2D2"
+      movie: "Star Wars",
+      name: "R2D2",
+      selected: true,
+      visible: true
     },
     {
       id_hero: 1,
-      movie: "StarWars",
-      name: "3PO"
+      movie: "Star Wars",
+      name: "3PO",
+      selected: true,
+      visible: false
     },
     {
       id_hero: 2,
       movie: "Star Trek",
-      name: "Spock"
+      name: "Spock",
+      selected: false,
+      visible: true
     }
-  ],
-  visibilityFilter: "SHOW_ALL"
+  ]
 };
 
 export default initialStateDatabase;

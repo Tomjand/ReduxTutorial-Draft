@@ -13,6 +13,13 @@ export const insertHero = text => {
   };
 };
 
+export const toggleHeros = id => {
+  return {
+    type: "toggleHeros",
+    id: id
+  };
+};
+
 export const deleteAllHeros = () => {
   return {
     type: "deleteAllHeros"
@@ -29,7 +36,7 @@ export const deleteHero = text => {
 
 export const setVisibilityFilter = filter => {
   return {
-    type: "SET_VISIBILITY_FILTER",
-    filter
+    // type: "SET_VISIBILITY_FILTER",
+    // filter
   };
 };

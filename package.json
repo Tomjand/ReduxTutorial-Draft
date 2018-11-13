@@ -1,5 +1,5 @@
 {
-  "name": "ver-2-myredux13",
+  "name": "ver-2-myredux14",
   "version": "1.0.0",
   "description": "",
   "keywords": [],
@@ -8,13 +8,15 @@
     "@fortawesome/fontawesome-svg-core": "1.2.8",
     "@fortawesome/free-solid-svg-icons": "5.5.0",
     "@fortawesome/react-fontawesome": "0.1.3",
+    "axios": "0.18.0",
     "react": "16.5.2",
     "react-dom": "16.5.2",
     "react-fontawesome": "1.6.1",
     "react-redux": "5.1.0",
     "react-scripts": "2.0.3",
     "redux": "4.0.1",
-    "redux-devtools-extension": "2.13.5"
+    "redux-devtools-extension": "2.13.5",
+    "styled-components": "4.0.3"
   },
   "devDependencies": {},
   "scripts": {

@@ -12,10 +12,14 @@ import DeleteAllHeros from "../containers/DeleteAllHeros";
 const App = () => {
   return (
     <div className="App">
-      <h1>moj kurs Redux lekcja 13 ver. 2</h1>
-      <h3>dodanie tytułów filmow do herosow </h3>
-      <h3>zmiana STATE</h3>
-
+      <h1>moj kurs Redux lekcja 14 ver. 2</h1>
+      <h2>zagadnienia :</h2>
+      <ul>
+        <li>wprowadzenie styled-components</li>
+        <li>dynamiczne stylestyled-components</li>
+        <li>kolorowanie items zaleznie od zmiennej selected</li>
+      </ul>
+      <h2>zadanie :</h2>
       <AddHero />
       <VisibleHerosList />
       <DeleteAllHeros />

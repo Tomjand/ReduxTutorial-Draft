@@ -3,8 +3,11 @@ import { combineReducers } from "redux";
 
 const heros = (stateHeros = {}, action) => {
   //sprawdzic co tu ma stateHeros
-  if (action.type === "SHOW_ALL") {
-    return stateHeros;
+  //console.log(action.id);
+  if (action.type === "toggleHeros") {
+    return stateHeros.map(hero =>
+      hero.id_hero === action.id ? { ...hero, selected: !hero.selected } : hero
+    );
   }
   if (action.type === "insertHero") {
     return [
@@ -12,7 +15,8 @@ const heros = (stateHeros = {}, action) => {
       {
         id_hero: stateHeros.length + 1,
         movie: " no title",
-        name: action.name
+        name: action.name,
+        visible: true
       }
     ];
   }

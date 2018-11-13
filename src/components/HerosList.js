@@ -13,8 +13,11 @@ const HerosList = ({ heros }) => (
       return (
         <Hero
           key={index}
+          id={heros[index].id_hero}
           heroName={heros[index].name}
           movie={heros[index].movie}
+          selected={heros[index].selected}
+          visible={heros[index].visible}
         />
       );
     })}
