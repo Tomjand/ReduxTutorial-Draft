@@ -7,7 +7,11 @@
 
 import React from "react";
 import { connect } from "react-redux";
-import { deleteHero, toggleHeros } from "../actions";
+import {
+  deleteHero,
+  toggleSelectedHeroAction,
+  toggleFilteredHeroAction
+} from "../actions";
 import styled from "styled-components";
 
 import { faStroopwafel } from "@fortawesome/free-solid-svg-icons";
@@ -18,28 +22,35 @@ const Hero = ({ id, heroName, movie, selected, visible, dispatch }) => {
     dispatch(deleteHero(e.currentTarget.parentNode.firstChild.textContent));
   };
 
-  const toggHeros = e => {
-    //console.log(e.target, id);
-    dispatch(toggleHeros(id));
+  const toggleSelectedHero = e => {
+    dispatch(toggleSelectedHeroAction(id));
+  };
+  const toggleFilteredHero = e => {
+    dispatch(toggleFilteredHeroAction(id));
   };
 
   const Li = styled.li`
     color: ${props => (props.selected === true ? "orange" : "white")}; 
+    opacity: ${props => (props.visible === true ? "1" : "0.2")};
+    display: ${props => (props.visible === true ? "block" : "none")}
     };
   `;
-  //if (visible) {
+
   return (
-    <Li selected={selected}>
+    <Li selected={selected} visible={visible}>
       {heroName}
       <span onClick={delHero}> delete</span>
       <FontAwesomeIcon icon={faStroopwafel} onClick={delHero} />
       <span> {movie}</span>
-      <span onClick={toggHeros}>{selected ? " Selected" : " no-Selected"}</span>
+      <span onClick={toggleSelectedHero}>
+        {selected ? " Selected" : " no-Selected"}
+      </span>
+      <span onClick={toggleFilteredHero}>
+        {" "}
+        visible: {visible ? " Ture" : " False"}
+      </span>
     </Li>
   );
-  //} else {
-  //  return "";
-  //}
 };
 
 export default connect()(Hero);

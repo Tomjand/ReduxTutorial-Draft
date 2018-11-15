@@ -15,7 +15,7 @@ const mapStateToProps = myDatabaseState => {
 };
 
 const mapDispatchToProps = dispatch => ({
-  toggleHeros: movie => dispatch(toggleHeros(movie))
+  //toggleHeros: movie => dispatch(toggleHeros(movie))
 });
 
 export default connect(

@@ -7,22 +7,30 @@
 import React from "react";
 import AddHero from "../containers/AddHero";
 import VisibleHerosList from "../containers/VisibleHerosList";
-import DeleteAllHeros from "../containers/DeleteAllHeros";
+import ShowAllHerosContainer from "../containers/ShowAllHerosContainer";
+import DeleteAllHerosContainer from "../containers/DeleteAllHerosContainer";
 
 const App = () => {
   return (
     <div className="App">
-      <h1>moj kurs Redux lekcja 14 ver. 2</h1>
+      <h1>moj kurs Redux lekcja 15 ver. 2</h1>
       <h2>zagadnienia :</h2>
-      <ul>
-        <li>wprowadzenie styled-components</li>
-        <li>dynamiczne stylestyled-components</li>
-        <li>kolorowanie items zaleznie od zmiennej selected</li>
-      </ul>
+      <ol>
+        <li>
+          poprawka dla komponentu deleteAll Heros - rozbicie na komp
+          prezentacyjny i kontener - powinno być we wczesniejszych lekcjach{" "}
+        </li>
+        <li>zamiana konstrukcji if na switch case </li>
+        <li>
+          ukrywanie/filtrowanie elementów w zależności od zmiennej visible
+        </li>
+        <li>przycisk: pokaż wszystko</li>
+      </ol>
       <h2>zadanie :</h2>
       <AddHero />
       <VisibleHerosList />
-      <DeleteAllHeros />
+      <DeleteAllHerosContainer />
+      <ShowAllHerosContainer />
     </div>
   );
 };

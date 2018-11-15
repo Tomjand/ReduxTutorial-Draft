@@ -13,14 +13,21 @@ export const insertHero = text => {
   };
 };
 
-export const toggleHeros = id => {
+export const toggleSelectedHeroAction = id => {
   return {
-    type: "toggleHeros",
+    type: "toggleSelectedHero",
     id: id
   };
 };
 
-export const deleteAllHeros = () => {
+export const toggleFilteredHeroAction = id => {
+  return {
+    type: "toggleFilteredHero",
+    id: id
+  };
+};
+
+export const deleteAllHerosAction = () => {
   return {
     type: "deleteAllHeros"
   };
@@ -31,6 +38,12 @@ export const deleteHero = text => {
   return {
     type: "deleteHero",
     name: text
+  };
+};
+showAllHerosAction;
+export const showAllHerosAction = () => {
+  return {
+    type: "showAllHeros"
   };
 };
 
