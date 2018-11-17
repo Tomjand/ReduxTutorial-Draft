@@ -40,10 +40,22 @@ export const deleteHero = text => {
     name: text
   };
 };
-showAllHerosAction;
+
 export const showAllHerosAction = () => {
   return {
     type: "showAllHeros"
+  };
+};
+
+export const showSelectedAction = () => {
+  return {
+    type: "showSelected"
+  };
+};
+
+export const showNoSelectedAction = () => {
+  return {
+    type: "showNo-Selected"
   };
 };
 

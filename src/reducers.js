@@ -18,6 +18,18 @@ const heros = (stateHeros = {}, action) => {
       return stateHeros.map(hero => {
         return { ...hero, visible: true };
       });
+    case "showSelected":
+      return stateHeros.map(hero =>
+        hero.selected === true
+          ? { ...hero, visible: true }
+          : { ...hero, visible: false }
+      );
+    case "showNo-Selected":
+      return stateHeros.map(hero =>
+        hero.selected === false
+          ? { ...hero, visible: true }
+          : { ...hero, visible: false }
+      );
     case "insertHero":
       return [
         ...stateHeros,
@@ -25,6 +37,7 @@ const heros = (stateHeros = {}, action) => {
           id_hero: stateHeros.length + 1,
           movie: " no title",
           name: action.name,
+          selected: false,
           visible: true
         }
       ];

@@ -32,7 +32,7 @@ const Hero = ({ id, heroName, movie, selected, visible, dispatch }) => {
   const Li = styled.li`
     color: ${props => (props.selected === true ? "orange" : "white")}; 
     opacity: ${props => (props.visible === true ? "1" : "0.2")};
-    display: ${props => (props.visible === true ? "block" : "none")}
+    display: ${props => (props.visible === true ? "block" : "none")};
     };
   `;
 

@@ -9,28 +9,23 @@ import AddHero from "../containers/AddHero";
 import VisibleHerosList from "../containers/VisibleHerosList";
 import ShowAllHerosContainer from "../containers/ShowAllHerosContainer";
 import DeleteAllHerosContainer from "../containers/DeleteAllHerosContainer";
+import ShowSelectedContainer from "../containers/ShowSelectedContainer";
+import ShowNoSelectedContainer from "../containers/ShowNoSelectedContainer";
+import MyTasksCourse from "./myTasksCourse";
 
 const App = () => {
   return (
     <div className="App">
-      <h1>moj kurs Redux lekcja 15 ver. 2</h1>
+      <h1>moj kurs Redux lekcja 16</h1>
       <h2>zagadnienia :</h2>
-      <ol>
-        <li>
-          poprawka dla komponentu deleteAll Heros - rozbicie na komp
-          prezentacyjny i kontener - powinno być we wczesniejszych lekcjach{" "}
-        </li>
-        <li>zamiana konstrukcji if na switch case </li>
-        <li>
-          ukrywanie/filtrowanie elementów w zależności od zmiennej visible
-        </li>
-        <li>przycisk: pokaż wszystko</li>
-      </ol>
-      <h2>zadanie :</h2>
+      <MyTasksCourse />
+      <h2>aplikacja:</h2>
       <AddHero />
       <VisibleHerosList />
       <DeleteAllHerosContainer />
       <ShowAllHerosContainer />
+      <ShowSelectedContainer />
+      <ShowNoSelectedContainer />
     </div>
   );
 };
