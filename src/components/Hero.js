@@ -11,7 +11,7 @@ import {
   deleteHero,
   toggleSelectedHeroAction,
   toggleFilteredHeroAction
-} from "../actions";
+} from "../actions/herosActions";
 import styled from "styled-components";
 
 import { faStroopwafel } from "@fortawesome/free-solid-svg-icons";

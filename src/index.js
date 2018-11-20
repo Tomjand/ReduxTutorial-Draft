@@ -1,10 +1,8 @@
 import React from "react";
-
 import App from "./components/App";
 import ReactDOM from "react-dom";
 import initialStateDatabase from "./initialStateDatabase";
-
-import changeDatabase from "./reducers";
+import changeDatabase from "./reducers/mainReducer";
 import { Provider } from "react-redux";
 import { createStore } from "redux";
 

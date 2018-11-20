@@ -1,36 +1,32 @@
-import { combineReducers } from "redux";
-//import { updateMovieTitle } from "./actions";
-
 const heros = (stateHeros = {}, action) => {
-  //sprawdzic co tu ma stateHeros
   switch (action.type) {
-    case "toggleSelectedHero":
+    case "TOGGLE_SELECTED_HERO":
       return stateHeros.map(hero =>
         hero.id_hero === action.id
           ? { ...hero, selected: !hero.selected }
           : hero
       );
-    case "toggleFilteredHero":
+    case "TOGGLE_FILTERED_HERO":
       return stateHeros.map(hero =>
         hero.id_hero === action.id ? { ...hero, visible: !hero.visible } : hero
       );
-    case "showAllHeros":
+    case "SHOW_ALL":
       return stateHeros.map(hero => {
         return { ...hero, visible: true };
       });
-    case "showSelected":
+    case "SHOW_SELECTED": //like SELECT in SQL ;)
       return stateHeros.map(hero =>
         hero.selected === true
           ? { ...hero, visible: true }
           : { ...hero, visible: false }
       );
-    case "showNo-Selected":
+    case "SHOW_NO-SELECTED":
       return stateHeros.map(hero =>
         hero.selected === false
           ? { ...hero, visible: true }
           : { ...hero, visible: false }
       );
-    case "insertHero":
+    case "INSERT_HERO":
       return [
         ...stateHeros,
         {
@@ -41,25 +37,12 @@ const heros = (stateHeros = {}, action) => {
           visible: true
         }
       ];
-    case "deleteAllHeros":
+    case "DELETE_ALL_HEROS":
       return [];
-    case "deleteHero":
+    case "DELETE_HERO":
       return stateHeros.filter(e => e.name !== action.name);
     default:
       return stateHeros;
   }
 };
-
-const movie = (stateMovie = "", action) => {
-  if (action.type === "updateMovieTitle") {
-    return action.text;
-  }
-  return stateMovie;
-};
-
-const changeDatabase = combineReducers({
-  movie,
-  heros
-});
-
-export default changeDatabase;
+export default heros;

@@ -1,4 +1,4 @@
-import { deleteAllHerosAction } from "../actions";
+import { deleteAllHerosAction } from "../actions/herosActions";
 import DeleteAllHeros from "../components/DeleteAllHeros";
 import { connect } from "react-redux";
 
