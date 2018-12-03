@@ -37,3 +37,9 @@ export const filterAction = filter => {
     type: filter
   };
 };
+
+export const toggleBtn = text => {
+  return {
+    type: text
+  }
+}

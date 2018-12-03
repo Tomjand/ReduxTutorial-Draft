@@ -4,7 +4,8 @@ import { connect } from "react-redux";
 
 const mapStateToProps = (myDatabaseState, ownProps) => {
   return {
-    //heros: myDatabaseState.heros
+   
+    active: ownProps.filter === myDatabaseState.filter //name of button ===  set filter
   };
 };
 
