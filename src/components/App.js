@@ -14,7 +14,7 @@ import MyTasksCourse from "./myTasksCourse";
 const App = () => {
   return (
     <div className="App">
-      <h1>moj kurs Redux lekcja 17 (synchroniczna)</h1>
+      <h1>moj kurs Redux lekcja 18 (synchroniczna)</h1>
       <h2>zagadnienia :</h2>
       <MyTasksCourse />
       <h2>aplikacja:</h2>
