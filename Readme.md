@@ -2,4 +2,4 @@
 ## Lekcja-17
 
 Ostatnia lekcja jest tym samym co master
-Poszczególne lekcje to kolejne branch'e
+- Poszczególne lekcje to kolejne branch'e
